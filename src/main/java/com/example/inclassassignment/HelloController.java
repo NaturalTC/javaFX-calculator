@@ -54,5 +54,10 @@ public class HelloController {
         lblOutput.setText("0");
     }
 
+    /* TODO
+    - configure button logic
+    - figure out how to lock screen
+    - optional - css
+     */
 
 }
