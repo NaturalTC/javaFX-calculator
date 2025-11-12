@@ -5,44 +5,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="100.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inclassassignment.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inclassassignment.HelloController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="100.0" text="Calculator" />
-            <Label alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="100.0" text="output" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <Label fx:id="lblTitle" alignment="TOP_LEFT" prefHeight="17.0" prefWidth="100.0" text="Calculator" />
+            <Label fx:id="lblOutput" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="100.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="btn7" />
-                  <Button mnemonicParsing="false" text="btn8" />
-                  <Button mnemonicParsing="false" text="btn9" />
-                  <Button mnemonicParsing="false" text="btnDivide" />
+                  <Button id="btnClear" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#handleClear" prefHeight="7.0" prefWidth="9.0" text="c" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="btn4" />
-                  <Button mnemonicParsing="false" text="btn5" />
-                  <Button mnemonicParsing="false" text="btn6" />
-                  <Button mnemonicParsing="false" text="btnMultiply" />
+                  <Button fx:id="btn7" mnemonicParsing="false" onAction="#handleNumber" text="7" />
+                  <Button fx:id="btn8" mnemonicParsing="false" onAction="#handleNumber" text="8" />
+                  <Button fx:id="btn9" mnemonicParsing="false" onAction="#handleNumber" text="9" />
+                  <Button fx:id="btnDivide" mnemonicParsing="false" text="/" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="btn1" />
-                  <Button mnemonicParsing="false" text="btn2" />
-                  <Button mnemonicParsing="false" text="btn3" />
-                  <Button mnemonicParsing="false" text="btnSubtract" />
+                  <Button fx:id="btn4" mnemonicParsing="false" onAction="#handleNumber" text="4" />
+                  <Button fx:id="btn5" mnemonicParsing="false" onAction="#handleNumber" text="5" />
+                  <Button fx:id="btn6" mnemonicParsing="false" onAction="#handleNumber" text="6" />
+                  <Button fx:id="btnMultiply" mnemonicParsing="false"  text="x" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="btn0" />
-                  <Button mnemonicParsing="false" text="btnDecimal" />
-                  <Button mnemonicParsing="false" text="btnSum" />
-                  <Button mnemonicParsing="false" text="btnAdd" />
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#handleNumber" text="1" />
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#handleNumber" text="2" />
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#handleNumber" text="3" />
+                  <Button fx:id="btnSubtract" mnemonicParsing="false"  text="-" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btn0" mnemonicParsing="false" onAction="#handleNumber" text="0" />
+                  <Button fx:id="btnDecimal" mnemonicParsing="false" text="." />
+                  <Button fx:id="btnSum" mnemonicParsing="false" text="=" />
+                  <Button fx:id="btnAdd" mnemonicParsing="false"  text="+" />
                </children>
             </HBox>
          </children>

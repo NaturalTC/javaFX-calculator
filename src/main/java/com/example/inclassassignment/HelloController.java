@@ -1,14 +1,16 @@
 package com.example.inclassassignment;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
 public class HelloController {
 
     // Top of Display
-    @FXML private Label title;
-    @FXML private Label output;
+    @FXML private Label lblTitle;
+    @FXML private Label lblOutput;
 
     // VBox Upper
     @FXML private Button btn7;
@@ -34,6 +36,23 @@ public class HelloController {
     @FXML private Button btnSum;
     @FXML private Button btnAdd;
 
+
+    @FXML
+    private void handleNumber(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        String value = btn.getText();
+
+        if (lblOutput.getText().equals("0")) {
+            lblOutput.setText(value);
+        } else {
+            lblOutput.setText(lblOutput.getText() + value);
+        }
+    }
+
+    @FXML
+    private void handleClear(ActionEvent event) {
+        lblOutput.setText("0");
+    }
 
 
 }
