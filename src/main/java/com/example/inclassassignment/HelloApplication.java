@@ -15,8 +15,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+        stage.sizeToScene(); // Sets the window to the size of elements inside scene
     }
-
-
 
 }
