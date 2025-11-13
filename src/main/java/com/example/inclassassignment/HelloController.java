@@ -36,6 +36,7 @@ public class HelloController {
     @FXML private Button btnAdd;
 
 
+    // When a number is pressed
     @FXML
     private void handleNumber(ActionEvent event) {
         Button btn = (Button) event.getSource();
@@ -54,9 +55,9 @@ public class HelloController {
     }
 
     /* TODO
-    - configure button logic
-    - figure out how to lock screen
-    - optional - css
+    - configure button logic (first, second number, sum) (operator functionality)
+    - figure out how to lock screen (I want to increase the size of the Calc, lock the window, add padding)
+    - optional - css ( Possibly add colors? )
      */
 
 }
